@@ -27,9 +27,6 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 Python 3+ Required
@@ -44,7 +41,7 @@ Review Grades -> Download Grades (Located at the bottom of the page)
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Ryguy924/Grading-Partition.git
    ```
    OR
    Copy all .py files into a directory
@@ -139,6 +136,6 @@ This is a file required in the same directory as the .py files if you wish to us
 
 Ryan Howell -  ryanhowell15@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Ryguy924/Grading-Partition](https://github.com/Ryguy924/Grading-Partition)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
