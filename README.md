@@ -1,5 +1,7 @@
 
 <div id="top"></div>
+Script to automatically partition the grading of a Gradescope assignment. Can output the partition to a txt file, a json file, or to a google sheet.
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -129,7 +131,7 @@ This is a file required in the same directory as the .py files if you wish to us
  4. Create a new credential from the Credentials menu. I recommend the "help me choose" option. <img src="https://drive.google.com/uc?export=view&id=1oTRA8TAaYxWFHl1U8Ee9aSB14GcMYTWJ"> <img src="https://drive.google.com/uc?export=view&id=1UoKlEJNLB-Fr01X23nxXtWdyRBdrSTtT"> 
  5. When you get to the Service Account menu, enter whatever you want for the Part 1-Service Account Details then just skip the optional parts 2 and 3
  6. Click on the email of the created Service Account, then go to the keys menu -> add key -> create new key -> JSON to download a key.<img src="https://drive.google.com/uc?export=view&id=1Ak4NQBg-n93Bsls12BGMD1MU6iNSAAuF"> 
- 7. Rename this file to "client_key.json" and move it into the directoy of the .py files. Note, you should not have this file publicly accessible.
+ 7. Rename this file to "client_key.json" and move it into the directory of the .py files. Note, you should not have this file publicly accessible.
 
 <!-- CONTACT -->
 ## Contact
