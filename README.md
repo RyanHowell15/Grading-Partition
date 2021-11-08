@@ -1,7 +1,5 @@
 
 <div id="top"></div>
-Script to automatically partition the grading of a Gradescope assignment. Can output the partition to a txt file, a json file, or to a google sheet.
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -28,6 +26,7 @@ Script to automatically partition the grading of a Gradescope assignment. Can ou
 
 <!-- GETTING STARTED -->
 ## Getting Started
+Script to automatically partition the grading of a Gradescope assignment. Can output the partition to a txt file, a json file, or to a google sheet.
 
 ### Prerequisites
 
