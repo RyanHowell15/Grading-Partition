@@ -60,7 +60,7 @@ Review Grades -> Download Grades (Located at the bottom of the page)
     ```sh
    python3 main.py ./Assignment_7_Scores.csv
    ```
-   After this, a new file called partition.txt or partition.json will be created in the directory depending on the output method specified. That file will contain the partition.
+   After this, a new file called partition.txt (or partition.json depending on the setting) will be created in the same directory. That file will contain the partition.
    If you are using <a href="#google-sheets">Google Sheets</a>, a spreadsheet will be created instead of a partition file.
 
 
