@@ -12,12 +12,12 @@
         <li><a href="#quick-start-guide">Quick Start Guide</a></li>
       </ul>
     </li>
-    <li><a href="#settings.json">settings.json</a></li>
+    <li><a href="#settingsjson">settings.json</a></li>
     <li>
      <a href="#google-sheets">Google Sheets</a>
       <ul>
         <li><a href="#usage">Usage</a></li>
-        <li><a href="#client_key.json">client_key.json</a></li>
+        <li><a href="#client_keyjson">client_key.json</a></li>
        </ul>
       </li>
       <li><a href="#contact">Contact</a></li>
@@ -47,7 +47,7 @@ Review Grades -> Download Grades (Located at the bottom of the page)
    OR
    Copy all .py files into a directory
    
-2. If you do not have <a href="#settings.json">settings.json</a> configured, run
+2. If you do not have <a href="#settingsjson">settings.json</a> configured, run
    ```sh
    python3 main.py setup
    ```
@@ -104,7 +104,7 @@ Run this command to install the required libraries.
    ```
 
 ### Usage
-If you do not have <a href="#client_key.json">client_key.json</a> setup, you will need to set it up prior to these instructions.
+If you do not have <a href="#client_keyjson">client_key.json</a> setup, you will need to set it up prior to these instructions.
 
 Inside client_key.json, there is a "service_email" field. Copy the email, and share the google sheet you wish to use to this email. Make sure it has editor permissions.
 
