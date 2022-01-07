@@ -42,7 +42,7 @@ Review Grades -> Download Grades (Located at the bottom of the page)
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Ryguy924/Grading-Partition.git
+   git clone https://github.com/RyanHowell15/Grading-Partition.git
    ```
    OR
    Copy all .py files into a directory
@@ -139,6 +139,6 @@ This is a file required in the same directory as the .py files if you wish to us
 
 Ryan Howell -  ryanhowell15@gmail.com
 
-Project Link: [https://github.com/Ryguy924/Grading-Partition](https://github.com/Ryguy924/Grading-Partition)
+Project Link: [https://github.com/RyanHowell15/Grading-Partition](https://github.com/Ryguy924/Grading-Partition)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
