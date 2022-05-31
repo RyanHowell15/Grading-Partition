@@ -31,7 +31,6 @@ Script to automatically partition the grading of a Gradescope assignment. Can ou
 ### Prerequisites
 
 Python 3.6+ Required
-Python 3.8+ Recommended
 
 ### Getting the CSV File
 
