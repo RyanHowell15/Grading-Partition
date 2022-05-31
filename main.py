@@ -63,7 +63,7 @@ def Get_Settings():
         print("ERROR: no \"instructors\" field found in settings.json")
         exit()
 
-    if min(settings["instructors"].values(), default = 0) < 0:
+    if min(settings["instructors"].values(), default = 0) <= 0:
         print("ERROR: at least 1 instructor that works more than 0 hours must be defined")
         exit()
 
