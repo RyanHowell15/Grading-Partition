@@ -30,7 +30,8 @@ Script to automatically partition the grading of a Gradescope assignment. Can ou
 
 ### Prerequisites
 
-Python 3+ Required
+Python 3.6+ Required
+Python 3.8+ Recommended
 
 ### Getting the CSV File
 
@@ -106,7 +107,7 @@ Run this command to install the required libraries.
 ### Usage
 If you do not have <a href="#client_keyjson">client_key.json</a> setup, you will need to set it up prior to these instructions.
 
-Inside client_key.json, there is a "service_email" field. Copy the email, and share the google sheet you wish to use to this email. Make sure it has editor permissions.
+Inside client_key.json, there is a "client_email" field. Copy the email, and share the google sheet you wish to use to this email. Make sure it has editor permissions.
 
 Copy the url of the google sheet you wish to use into a "sheetUrl" field in settings.json. For example:
 ```json
@@ -125,6 +126,8 @@ NOTE: Before running the script again, you must either rename or delete this wor
 
 ### client_key.json
 This is a file required in the same directory as the .py files if you wish to use the google sheets functionality. There is some Google API setup required, you only have to do this once.
+
+Note, if you cannot view any of these images, try refreshing the page or visiting the url in the raw markdown file. 
 
  1. Visit [https://console.developers.google.com/](https://console.developers.google.com/)
  2. Create a new Project <img src="https://drive.google.com/uc?export=view&id=16aIkntgwlSiOdUZxOhbqgEIC_r0UOrYN"> 

@@ -5,7 +5,7 @@ Requires gspread and oauth downloaded.
 author: Ryan Howell
 """
 import gspread
-from gspread.models import Cell
+from gspread import Cell
 from oauth2client.service_account import ServiceAccountCredentials
 
 def Create_Sheet(partition, settings):

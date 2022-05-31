@@ -25,7 +25,6 @@ def Process_CSV(filepath, settings):
         list: list of lists, each containing names 
             of each partner (or 1 name if solo)
     """
-
     with open(filepath, 'r') as csvfile: 
         csv_reader = csv.DictReader(csvfile)
         visited = {}
@@ -37,10 +36,10 @@ def Process_CSV(filepath, settings):
                     studentName += ' ' + row["Last Name"]
 
                 if studentName.upper() not in settings["instructors"]: 
-                    id = row["Submission ID"]
-                    if id not in visited:
-                        visited[id] = []
-                    visited[id].append(studentName)
+                    subID = row["Submission ID"]
+                    if subID not in visited:
+                        visited[subID] = []
+                    visited[subID].append(studentName)
 
     return list(visited.values())
     
@@ -55,12 +54,17 @@ def Get_Settings():
     if not path.exists('settings.json'):
         print("ERROR: settings.json file not found. Try running the setup command and refer to the README.")
         exit()
+
     settings = {}
     with open('settings.json') as json_file:
         settings = json.load(json_file)
 
     if "instructors" not in settings:
         print("ERROR: no \"instructors\" field found in settings.json")
+        exit()
+
+    if min(settings["instructors"].values(), default = 0) < 0:
+        print("ERROR: at least 1 instructor that works more than 0 hours must be defined")
         exit()
 
     if "output" not in settings:
@@ -71,8 +75,8 @@ def Get_Settings():
 
     output = settings["output"]
     if output not in possible_outputs:
-        print("ERROR: output setting of " + output + " not valid.")
-        print("Must be one of: " + str(possible_outputs) + " only.")
+        print(f"ERROR: output setting of {output} not valid.")
+        print(f"Must be one of: {possible_outputs} only.")
         exit()
 
     if output == "googlesheets":
@@ -83,7 +87,7 @@ def Get_Settings():
             print("ERROR: googlesheets output specified but no client_key.json found in current directory")
             exit()
 
-    
+
     return settings
 
 def Output(partition, settings):
@@ -117,8 +121,9 @@ def Output(partition, settings):
         googlesheets.Create_Sheet(partition, settings)
 
 if __name__ == "__main__":
+    error_message = "ERROR: Only input filepath to a .csv file or setup command. For example:\n python3 main.py setup\nor\npython3 main.py ./Assignment_7_Scores.csv"
     if len(sys.argv) != 2:
-        print("Only input filepath or setup command")
+        print(error_message)
         exit()
 
     command = sys.argv[1]
@@ -131,10 +136,14 @@ if __name__ == "__main__":
         
         Output(p, settings)
     elif command == "setup":
+        if path.exists('settings.json'):
+            print("ERROR: existing settings.json detected. Setup command not ran")
+            exit()
+
         settingsTemplate = {
             "instructors":{
                 "John Doe":20,
-                "Jane Doe":15
+                "Jane Doe":15,
             },
             "output":"txt"
         }
@@ -143,5 +152,5 @@ if __name__ == "__main__":
         with open("settings.json", "w") as outfile:
             outfile.write(json_object)
     else:
-        print("Only input filepath or setup command")
+        print(error_message)
         exit()
